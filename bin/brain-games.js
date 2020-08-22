@@ -1,4 +1,6 @@
 #!/usr/bin/env node
 
-import _ from '/home/zhlznk/Hexlet/project-lvl1/src/cli.js';
+import cli from '../src/cli.js';
 
+const name = cli();
+console.log(`Hello ${name}!`);
