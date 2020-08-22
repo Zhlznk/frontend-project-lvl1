@@ -1,8 +1,8 @@
 {
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,8 +16,8 @@
     "url": "https://github.com/Zhlznk/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/Zhlznk/frontend-project-lvl1#readme",
-  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
-  }
+  },
+  "description": ""
 }
