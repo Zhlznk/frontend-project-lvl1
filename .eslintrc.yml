@@ -9,4 +9,5 @@ parserOptions:
   sourceType: module
 rules: {
   "no-console": "off",
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version,
 }
