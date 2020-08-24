@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import cli from '../src/cli.js';
+import { greeting, dialogue } from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
-const name = cli('May I have your name? ');
-console.log(`Hello ${name}!`);
-
+const name = greeting();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const isAnswerCorrect = (num, answer) => {
@@ -22,7 +19,7 @@ const play = () => {
     const correct = () => ((num % 2 === 0) ? '"yes"' : '"no"');
 
     console.log(`Question: ${num} `);
-    const answer = (cli('Your answer: '));
+    const answer = (dialogue('Your answer: '));
 
     if (isAnswerCorrect(num, answer)) {
       counter += 1;
