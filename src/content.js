@@ -30,6 +30,15 @@ const content = (str) => {
     }
     result.push(`${numOne} ${numTwo}`, `${answerCorrect}`);
   }
+  if (str === 'progression') {
+    const tmp = [numOne];
+    while (tmp.length < 10) tmp.push(tmp[tmp.length - 1] + numTwo);
+    let element = getRandomInt(tmp.length);
+    answerCorrect = tmp[element];
+    tmp[element] = '..';
+    result.push(tmp.join(' '), `${answerCorrect}`);
+  }
+
   return result;
 };
 
