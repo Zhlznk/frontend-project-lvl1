@@ -1,6 +1,6 @@
 import index from '../index.js';
 
 const guide = 'Answer "yes" if the number is even, otherwise answer "no".';
-const even = index(guide, 'even');
+const prime = index(guide, 'even');
 
-export default even;
+export default prime;

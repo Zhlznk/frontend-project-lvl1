@@ -1,23 +1,32 @@
 const randomNum = () => (Math.floor(Math.random() * 100));
 
+const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
+
 const content = (str) => {
   const result = [];
+  let answerCorrect = '';
+  const numOne = randomNum();
+  const numTwo = randomNum();
+
   if (str === 'even') {
-    const num = randomNum();
-    const answerCorrect = () => ((num % 2 === 0) ? 'yes' : 'no');
-    result.push(num, answerCorrect(num));
+    answerCorrect = () => ((numOne % 2 === 0) ? 'yes' : 'no');
+    result.push(numOne, answerCorrect(numOne));
   }
   if (str === 'calc') {
     const tmp = ['+', '-', '*'];
-    const first = randomNum();
-    const second = randomNum();
-    const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
     const item = getRandomInt(3);
-    let answerCorrect = 0;
-    if (item === 0) answerCorrect = (first + second);
-    if (item === 1) answerCorrect = (first - second);
-    if (item === 2) answerCorrect = (first * second);
-    result.push(`${first} ${tmp[item]} ${second}`, `${answerCorrect}`);
+    if (item === 0) answerCorrect = (numOne + numTwo);
+    if (item === 1) answerCorrect = (numOne - numTwo);
+    if (item === 2) answerCorrect = (numOne * numTwo);
+    result.push(`${numOne} ${tmp[item]} ${numTwo}`, `${answerCorrect}`);
+  }
+  if (str === 'prime') {
+    const tmp = ['+', '-', '*'];
+    const item = getRandomInt(3);
+    if (item === 0) answerCorrect = (numOne + numTwo);
+    if (item === 1) answerCorrect = (numOne - numTwo);
+    if (item === 2) answerCorrect = (numOne * numTwo);
+    result.push(`${numOne} ${tmp[item]} ${numTwo}`, `${answerCorrect}`);
   }
   return result;
 };
