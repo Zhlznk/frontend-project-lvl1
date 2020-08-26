@@ -20,13 +20,8 @@ const content = (str) => {
     if (item === 2) answerCorrect = (numOne * numTwo);
     result.push(`${numOne} ${tmp[item]} ${numTwo}`, `${answerCorrect}`);
   }
-  if (str === 'prime') {
-    const tmp = ['+', '-', '*'];
-    const item = getRandomInt(3);
-    if (item === 0) answerCorrect = (numOne + numTwo);
-    if (item === 1) answerCorrect = (numOne - numTwo);
-    if (item === 2) answerCorrect = (numOne * numTwo);
-    result.push(`${numOne} ${tmp[item]} ${numTwo}`, `${answerCorrect}`);
+  if (str === 'gcd') {
+    result.push('1', '25');
   }
   return result;
 };
