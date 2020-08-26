@@ -6,8 +6,14 @@ const content = (str) => {
     result.push(num, answerCorrect(num));
     return result;
   }
-  if (str === 'd') return 10500;
-  return 444;
+  if (str === 'calc') {
+    const result = [];
+    const num = 100;
+    const answerCorrect = 500;
+    result.push(num, answerCorrect);
+    return result;
+  }
+  return 500;
 };
 
 export default content;
