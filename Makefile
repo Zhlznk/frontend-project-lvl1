@@ -17,4 +17,7 @@ brain-calc:
 	node bin/brain-calc.js
 
 brain-progressive:
-	node brain/brain-progressive.js
+	node bin/brain-progressive.js
+
+brain-prime:
+	node bin/brain-prime.js
