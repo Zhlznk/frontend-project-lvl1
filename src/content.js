@@ -38,6 +38,9 @@ const content = (str) => {
     tmp[element] = '..';
     result.push(tmp.join(' '), `${answerCorrect}`);
   }
+  if (str === 'prime') {
+    result.push(result.push(`${numOne} ${numTwo}`, '15'));
+  }
 
   return result;
 };
