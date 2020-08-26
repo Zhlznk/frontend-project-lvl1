@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import prime from '../src/games/prime.js';
+import gcd from '../src/games/gcd.js';
 
-console.log(prime);
+console.log(gcd);

@@ -21,7 +21,14 @@ const content = (str) => {
     result.push(`${numOne} ${tmp[item]} ${numTwo}`, `${answerCorrect}`);
   }
   if (str === 'gcd') {
-    result.push('1', '25');
+    if (numOne === 0 || numTwo === 0) {
+      answerCorrect = 0;
+    } else {
+      let divider = (numOne < numTwo) ? Math.floor(numOne / 2) : Math.floor(numTwo / 2);
+      while ((numOne % divider) + (numTwo % divider) !== 0) divider -= 1;
+      answerCorrect = divider;
+    }
+    result.push(`${numOne} ${numTwo}`, `${answerCorrect}`);
   }
   return result;
 };
