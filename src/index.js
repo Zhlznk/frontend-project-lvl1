@@ -16,7 +16,7 @@ const play = (guide, str) => {
       counter += 1;
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was ${answerCorrect}.`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${answerCorrect}".`);
       console.log(`Let's try again, ${name}!`);
     }
   }
