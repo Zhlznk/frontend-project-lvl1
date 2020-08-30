@@ -7,7 +7,7 @@ const content = (str) => {
   let textQuestion = '';
   let answerCorrect = '';
   let numOne = randomNum();
-  const numTwo = randomNum();
+  let numTwo = randomNum();
 
   if (str === 'even') {
     const isEven = (num) => ((num % 2 === 0) ? 'yes' : 'no');
@@ -25,13 +25,12 @@ const content = (str) => {
   if (str === 'gcd') {
     textQuestion = `${numOne} ${numTwo}`;
     if (numOne === 0 || numTwo === 0) {
-      answerCorrect = '0';
-    } else {
-      let divider = (numOne < numTwo) ? Math.floor(numOne / 2) : Math.floor(numTwo / 2);
-      while ((numOne % divider) + (numTwo % divider) !== 0) divider -= 1;
-      answerCorrect = `${divider}`;
+      numOne += 1;
+      numTwo += 1;
     }
-    result.push(textQuestion, answerCorrect);
+    let divider = (numOne < numTwo) ? Math.floor(numOne / 2) : Math.floor(numTwo / 2);
+    while ((numOne % divider) + (numTwo % divider) !== 0) divider -= 1;
+    answerCorrect = `${divider}`;
   }
   if (str === 'progression') {
     const tmp = [numOne];
