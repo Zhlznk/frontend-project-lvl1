@@ -3,16 +3,16 @@
 [![Node CI](https://github.com/Zhlznk/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Zhlznk/frontend-project-lvl1/actions)
 
 Установка пакета и демонстрация игры Brain-even:
-[![asciicast](https://asciinema.org/a/Q0gbyuTQ2F5epcrZj0L20zlQi.svg)](https://asciinema.org/a/Q0gbyuTQ2F5epcrZj0L20zlQi)
+[![asciicast](https://asciinema.org/a/nWwKk5vdEp4z9IEZUD2M9DV3J.svg)](https://asciinema.org/a/nWwKk5vdEp4z9IEZUD2M9DV3J)
 
 Brain-calc:
-[![asciicast](https://asciinema.org/a/4WTuVVKFPb0kDFG47V7vRUVe1.svg)](https://asciinema.org/a/4WTuVVKFPb0kDFG47V7vRUVe1)
+[![asciicast](https://asciinema.org/a/0wKVJU8HzuKazboHXJhZfLeZZ.svg)](https://asciinema.org/a/0wKVJU8HzuKazboHXJhZfLeZZ)
 
 Brain-gcd:
-[![asciicast](https://asciinema.org/a/tClWwTBj1ojpUp4gpy5dch21Y.svg)](https://asciinema.org/a/tClWwTBj1ojpUp4gpy5dch21Y)
+[![asciicast](https://asciinema.org/a/zpj6IZtDBFVUMIrxqTQAo1Axe.svg)](https://asciinema.org/a/zpj6IZtDBFVUMIrxqTQAo1Axe)
 
 Brain-progressione:
-[![asciicast](https://asciinema.org/a/3dOrR6bF7u2XRY1Cjucaf1ZNZ.svg)](https://asciinema.org/a/3dOrR6bF7u2XRY1Cjucaf1ZNZ)
+[![asciicast](https://asciinema.org/a/hNUydhLbAUlowWSx8NhCTkgsq.svg)](https://asciinema.org/a/hNUydhLbAUlowWSx8NhCTkgsq)
 
 Brain-prime:
-[![asciicast](https://asciinema.org/a/vNw5FPKUpWtbgMG2V1rer2swa.svg)](https://asciinema.org/a/vNw5FPKUpWtbgMG2V1rer2swa)
+[![asciicast](https://asciinema.org/a/KKyqrIMrJ5AEZP34jSV2ob5l5.svg)](https://asciinema.org/a/KKyqrIMrJ5AEZP34jSV2ob5l5)
