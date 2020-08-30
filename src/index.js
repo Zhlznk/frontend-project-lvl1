@@ -3,12 +3,13 @@ import content from './content.js';
 import greeting from './cli.js';
 
 const play = (guide, str) => {
+  const correctAnswersInARow = 3;
   const name = greeting();
   console.log(guide);
 
   let counter = 0;
 
-  while (counter < 3) {
+  while (counter < correctAnswersInARow) {
     const [textQuestion, answerCorrect] = content(str);
     console.log(`Question: ${textQuestion}`);
     const answer = (readlineSync.question('Your answer: '));
