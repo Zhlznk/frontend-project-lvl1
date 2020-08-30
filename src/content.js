@@ -11,8 +11,8 @@ const content = (str) => {
 
   if (str === 'even') {
     const isEven = (num) => ((num % 2 === 0) ? 'yes' : 'no');
-    answerCorrect = isEven(numOne);
     textQuestion = numOne;
+    answerCorrect = isEven(numOne);
   }
   if (str === 'calc') {
     const tmp = ['+', '-', '*'];
