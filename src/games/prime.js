@@ -7,7 +7,7 @@ const max = 100;
 
 const isPrime = (num) => {
   if (num < 1) return 'no';
-  if (num === 1 || num === 2 || num === 3) return 'yes';
+  if (num <= 3) return 'yes';
   for (let divider = 2; divider <= num / 2; divider += 1) {
     if (num % divider === 0) return 'no';
   }
