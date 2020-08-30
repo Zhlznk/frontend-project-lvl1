@@ -1,6 +1,28 @@
 import index from '../index.js';
+import random from '../random.js';
 
 const guide = 'What is the result of the expression?';
-const calc = index(guide, 'calc');
+const min = 0;
+const max = 20;
+
+const toNumber = (numOne, character, numTwo) => {
+  let result;
+  if (character === '+') result = `${numOne + numTwo}`;
+  if (character === '-') result = `${numOne - numTwo}`;
+  if (character === '*') result = `${numOne * numTwo}`;
+  return result;
+};
+
+const content = () => {
+  const tmp = ['+', '-', '*'];
+  const item = random(min, tmp.length - 1);
+  const numOne = random(min, max);
+  const numTwo = random(min, max);
+  const textQuestion = `${numOne} ${tmp[item]} ${numTwo}`;
+  const answerCorrect = toNumber(numOne, tmp[item], numTwo);
+  return [textQuestion, answerCorrect];
+};
+
+const calc = () => index(guide, content);
 
 export default calc;

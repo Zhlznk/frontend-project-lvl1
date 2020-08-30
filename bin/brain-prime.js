@@ -2,4 +2,4 @@
 
 import prime from '../src/games/prime.js';
 
-console.log(prime);
+prime();

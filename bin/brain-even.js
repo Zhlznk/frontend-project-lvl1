@@ -2,4 +2,4 @@
 
 import even from '../src/games/even.js';
 
-console.log(even);
+even();

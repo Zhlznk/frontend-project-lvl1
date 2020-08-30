@@ -2,7 +2,7 @@
 
 [![Node CI](https://github.com/Zhlznk/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Zhlznk/frontend-project-lvl1/actions)
 
-Brain-even:
+Установка пакета и демонстрация игры Brain-even:
 [![asciicast](https://asciinema.org/a/Q0gbyuTQ2F5epcrZj0L20zlQi.svg)](https://asciinema.org/a/Q0gbyuTQ2F5epcrZj0L20zlQi)
 
 Brain-calc:

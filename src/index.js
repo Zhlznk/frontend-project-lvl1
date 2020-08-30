@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
-import content from './content.js';
 import greeting from './cli.js';
 
-const play = (guide, str) => {
+const play = (guide, content) => {
   const correctAnswersInARow = 3;
   const name = greeting();
   console.log(guide);
@@ -10,7 +9,7 @@ const play = (guide, str) => {
   let counter = 0;
 
   while (counter < correctAnswersInARow) {
-    const [textQuestion, answerCorrect] = content(str);
+    const [textQuestion, answerCorrect] = content();
     console.log(`Question: ${textQuestion}`);
     const answer = (readlineSync.question('Your answer: '));
     if (answerCorrect === answer) {
@@ -22,7 +21,7 @@ const play = (guide, str) => {
       counter = 0;
     }
   }
-  return `Congratulations, ${name}!`;
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export default play;
