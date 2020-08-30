@@ -1,7 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/0ba060bd47cf967d5193/maintainability)](https://codeclimate.com/github/Zhlznk/frontend-project-lvl1/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/bc8ea04c6c3898fdad256d0e7eebf0e9026b2cd652c60da453c0f7338cd74ef3/test_coverage)](https://codeclimate.com/github/Zhlznk/frontend-project-lvl1/test_coverage)
-
 [![Node CI](https://github.com/Zhlznk/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Zhlznk/frontend-project-lvl1/actions)
 
 Brain-even:
@@ -18,4 +16,3 @@ Brain-progressione:
 
 Brain-prime:
 [![asciicast](https://asciinema.org/a/vNw5FPKUpWtbgMG2V1rer2swa.svg)](https://asciinema.org/a/vNw5FPKUpWtbgMG2V1rer2swa)
-
