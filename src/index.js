@@ -1,24 +1,24 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-const run = (description, generateRoundData) => {
-  const roundsCount = 3;
-  const name = greeting();
+const run = (description, roundsCount, generateRoundData) => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  if (description.length) return console.log(`Hello ${name}!`);
+  console.log(`Hello ${name}!`);
   console.log(description);
 
-  let counter = 0;
+  let counter = roundsCount;
 
-  while (counter < roundsCount) {
+  while (counter > 0) {
+    counter -= 1;
     const [textQuestion, answerCorrect] = generateRoundData();
     console.log(`Question: ${textQuestion}`);
     const answer = (readlineSync.question('Your answer: '));
     if (answerCorrect === answer) {
-      counter += 1;
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${answerCorrect}".`);
-      console.log(`Let's try again, ${name}!`);
-      counter = 0;
+      return console.log(`Let's try again, ${name}!`);
     }
   }
   return console.log(`Congratulations, ${name}!`);
