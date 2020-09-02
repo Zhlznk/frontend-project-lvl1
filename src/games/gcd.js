@@ -1,7 +1,7 @@
-import index from '../index.js';
+import run from '../index.js';
 import random from '../random.js';
 
-const guide = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 const min = 2;
 const max = 50;
 
@@ -11,7 +11,7 @@ const greatestCommonDivisor = (numOne, numTwo) => {
   return divider;
 };
 
-const content = () => {
+const generateRoundData = () => {
   const numOne = random(min, max);
   const numTwo = random(min, max);
   const textQuestion = `${numOne} ${numTwo}`;
@@ -19,6 +19,6 @@ const content = () => {
   return [textQuestion, answerCorrect];
 };
 
-const gcd = () => index(guide, content);
+const runGcdGame = () => run(description, generateRoundData);
 
-export default gcd;
+export default runGcdGame;

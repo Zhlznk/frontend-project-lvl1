@@ -1,11 +1,11 @@
-import index from '../index.js';
+import run from '../index.js';
 import random from '../random.js';
 
-const guide = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const min = 0;
 const max = 50;
 
-const content = () => {
+const generateRoundData = () => {
   const numOne = random(min, max);
   const numTwo = random(min, max);
   const tmp = [numOne];
@@ -17,6 +17,6 @@ const content = () => {
   return [textQuestion, answerCorrect];
 };
 
-const progression = () => index(guide, content);
+const runProgressionGame = () => run(description, generateRoundData);
 
-export default progression;
+export default runProgressionGame;

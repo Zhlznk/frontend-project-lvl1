@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const play = (guide, content) => {
-  const correctAnswersInARow = 3;
+const run = (description, generateRoundData) => {
+  const roundsCount = 3;
   const name = greeting();
-  console.log(guide);
+  console.log(description);
 
   let counter = 0;
 
-  while (counter < correctAnswersInARow) {
-    const [textQuestion, answerCorrect] = content();
+  while (counter < roundsCount) {
+    const [textQuestion, answerCorrect] = generateRoundData();
     console.log(`Question: ${textQuestion}`);
     const answer = (readlineSync.question('Your answer: '));
     if (answerCorrect === answer) {
@@ -24,4 +24,4 @@ const play = (guide, content) => {
   return console.log(`Congratulations, ${name}!`);
 };
 
-export default play;
+export default run;

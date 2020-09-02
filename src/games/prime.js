@@ -1,7 +1,7 @@
-import index from '../index.js';
+import run from '../index.js';
 import random from '../random.js';
 
-const guide = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const min = 0;
 const max = 100;
 
@@ -16,7 +16,7 @@ const isPrime = (num) => {
 
 const needPrime = (num) => ((isPrime(num) === 'yes') ? num : needPrime(num + 1));
 
-const content = () => {
+const generateRoundData = () => {
   let numOne = random(min, max);
   const numTwo = random(min, max);
   // Для того, чтобы чаще в textQuestion попадались простые числа.
@@ -26,6 +26,6 @@ const content = () => {
   return [textQuestion, answerCorrect];
 };
 
-const prime = () => index(guide, content);
+const runPrimeGame = () => run(description, generateRoundData);
 
-export default prime;
+export default runPrimeGame;

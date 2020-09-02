@@ -1,7 +1,7 @@
-import index from '../index.js';
+import run from '../index.js';
 import random from '../random.js';
 
-const guide = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 const min = 0;
 const max = 20;
 
@@ -13,7 +13,7 @@ const toNumber = (numOne, character, numTwo) => {
   return result;
 };
 
-const content = () => {
+const generateRoundData = () => {
   const tmp = ['+', '-', '*'];
   const item = random(min, tmp.length - 1);
   const numOne = random(min, max);
@@ -23,6 +23,6 @@ const content = () => {
   return [textQuestion, answerCorrect];
 };
 
-const calc = () => index(guide, content);
+const runCalcGame = () => run(description, generateRoundData);
 
-export default calc;
+export default runCalcGame;
