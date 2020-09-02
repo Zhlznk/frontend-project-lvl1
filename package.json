@@ -1,7 +1,8 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "brain-games",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Brain training games",
+  "main": "scr/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +25,6 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "bin/brain-prime.js"
   },
-  "description": "",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },
