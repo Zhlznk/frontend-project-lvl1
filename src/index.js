@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 const run = (description, roundsCount, generateRoundData) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  if (description.length) return console.log(`Hello ${name}!`);
+  if (description.length === 0) return console.log(`Hello ${name}!`);
   console.log(`Hello ${name}!`);
   console.log(description);
 
