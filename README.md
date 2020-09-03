@@ -14,24 +14,24 @@ You will see a description and rules at the beginning of the game. You win if yo
 ```sh
 $ brain-even
 ```
-[![asciicast](https://asciinema.org/a/nWwKk5vdEp4z9IEZUD2M9DV3J.svg)](https://asciinema.org/a/nWwKk5vdEp4z9IEZUD2M9DV3J)
+[![asciicast](https://asciinema.org/a/czoxdxHSERhjsrBkMylfHLwyc.svg)](https://asciinema.org/a/czoxdxHSERhjsrBkMylfHLwyc)
 
 ```sh
 $ brain-calc
 ```
-[![asciicast](https://asciinema.org/a/0wKVJU8HzuKazboHXJhZfLeZZ.svg)](https://asciinema.org/a/0wKVJU8HzuKazboHXJhZfLeZZ)
+[![asciicast](https://asciinema.org/a/7DH9hzxDNGzqi22PNN2edWrZ9.svg)](https://asciinema.org/a/7DH9hzxDNGzqi22PNN2edWrZ9)
 
 ```sh
-$ brain-gsd
+$ brain-gcd
 ```
-[![asciicast](https://asciinema.org/a/zpj6IZtDBFVUMIrxqTQAo1Axe.svg)](https://asciinema.org/a/zpj6IZtDBFVUMIrxqTQAo1Axe)
+[![asciicast](https://asciinema.org/a/Tal5nrRGYrUiiiU1l6pM9EES6.svg)](https://asciinema.org/a/Tal5nrRGYrUiiiU1l6pM9EES6)
 
 ```sh
-$ brain-progressione
+$ brain-progression
 ```
-[![asciicast](https://asciinema.org/a/hNUydhLbAUlowWSx8NhCTkgsq.svg)](https://asciinema.org/a/hNUydhLbAUlowWSx8NhCTkgsq)
+[![asciicast](https://asciinema.org/a/jbSzX3Zl1hnWbP10etQw2V5Jd.svg)](https://asciinema.org/a/jbSzX3Zl1hnWbP10etQw2V5Jd)
 
 ```sh
 $ brain-prime
 ```
-[![asciicast](https://asciinema.org/a/KKyqrIMrJ5AEZP34jSV2ob5l5.svg)](https://asciinema.org/a/KKyqrIMrJ5AEZP34jSV2ob5l5)
+[![asciicast](https://asciinema.org/a/DfSMvfnX09VB7oB5Y0t3ZtvbF.svg)](https://asciinema.org/a/DfSMvfnX09VB7oB5Y0t3ZtvbF)
