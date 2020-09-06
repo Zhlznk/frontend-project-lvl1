@@ -2,7 +2,6 @@ import run from '../index.js';
 import random from '../random.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const roundsCount = 3;
 const min = 0;
 const max = 100;
 
@@ -27,6 +26,6 @@ const generateRoundData = () => {
   return [textQuestion, answerCorrect];
 };
 
-const runPrimeGame = () => run(description, roundsCount, generateRoundData);
+const runPrimeGame = () => run(description, generateRoundData);
 
 export default runPrimeGame;

@@ -2,7 +2,6 @@ import run from '../index.js';
 import random from '../random.js';
 
 const description = 'What is the result of the expression?';
-const roundsCount = 3;
 const min = 0;
 const max = 20;
 
@@ -24,6 +23,6 @@ const generateRoundData = () => {
   return [textQuestion, answerCorrect];
 };
 
-const runCalcGame = () => run(description, roundsCount, generateRoundData);
+const runCalcGame = () => run(description, generateRoundData);
 
 export default runCalcGame;
