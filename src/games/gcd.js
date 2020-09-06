@@ -14,9 +14,9 @@ const greatestCommonDivisor = (numOne, numTwo) => {
 const generateRoundData = () => {
   const numOne = random(min, max);
   const numTwo = random(min, max);
-  const textQuestion = `${numOne} ${numTwo}`;
-  const answerCorrect = `${greatestCommonDivisor(numOne, numTwo)}`;
-  return [textQuestion, answerCorrect];
+  const question = `${numOne} ${numTwo}`;
+  const correctAnswer = `${greatestCommonDivisor(numOne, numTwo)}`;
+  return [question, correctAnswer];
 };
 
 const runGcdGame = () => run(description, generateRoundData);

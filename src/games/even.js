@@ -8,9 +8,9 @@ const max = 100;
 const isEven = (num) => ((num % 2 === 0) ? 'yes' : 'no');
 
 const generateRoundData = () => {
-  const textQuestion = random(min, max);
-  const answerCorrect = isEven(textQuestion);
-  return [textQuestion, answerCorrect];
+  const question = random(min, max);
+  const correctAnswer = isEven(question);
+  return [question, correctAnswer];
 };
 
 const runEvenGame = () => run(description, generateRoundData);

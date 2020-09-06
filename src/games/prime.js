@@ -19,11 +19,11 @@ const needPrime = (num) => ((isPrime(num) === 'yes') ? num : needPrime(num + 1))
 const generateRoundData = () => {
   let numOne = random(min, max);
   const numTwo = random(min, max);
-  // Для того, чтобы чаще в textQuestion попадались простые числа.
+  // Для того, чтобы чаще в question попадались простые числа.
   if (numTwo % 2 > 0) numOne = needPrime(numOne);
-  const textQuestion = `${numOne}`;
-  const answerCorrect = `${isPrime(numOne)}`;
-  return [textQuestion, answerCorrect];
+  const question = `${numOne}`;
+  const correctAnswer = `${isPrime(numOne)}`;
+  return [question, correctAnswer];
 };
 
 const runPrimeGame = () => run(description, generateRoundData);

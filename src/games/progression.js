@@ -11,10 +11,10 @@ const generateRoundData = () => {
   const tmp = [numOne];
   while (tmp.length < 10) tmp.push(tmp[tmp.length - 1] + numTwo);
   const element = random(min, tmp.length - 1);
-  const answerCorrect = `${tmp[element]}`;
+  const correctAnswer = `${tmp[element]}`;
   tmp[element] = '..';
-  const textQuestion = tmp.join(' ');
-  return [textQuestion, answerCorrect];
+  const question = tmp.join(' ');
+  return [question, correctAnswer];
 };
 
 const runProgressionGame = () => run(description, generateRoundData);

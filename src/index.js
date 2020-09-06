@@ -8,17 +8,14 @@ const run = (description, generateRoundData) => {
   console.log(`Hello ${name}!`);
   console.log(description);
 
-  let counter = roundsCount;
-
-  while (counter > 0) {
-    counter -= 1;
-    const [textQuestion, answerCorrect] = generateRoundData();
-    console.log(`Question: ${textQuestion}`);
+  for (let counter = 0; counter < roundsCount; counter += 1) {
+    const [question, correctAnswer] = generateRoundData();
+    console.log(`Question: ${question}`);
     const answer = (readlineSync.question('Your answer: '));
-    if (answerCorrect === answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${answerCorrect}".`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       return console.log(`Let's try again, ${name}!`);
     }
   }

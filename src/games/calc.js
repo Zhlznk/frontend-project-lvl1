@@ -18,9 +18,9 @@ const generateRoundData = () => {
   const item = random(min, tmp.length - 1);
   const numOne = random(min, max);
   const numTwo = random(min, max);
-  const textQuestion = `${numOne} ${tmp[item]} ${numTwo}`;
-  const answerCorrect = toNumber(numOne, tmp[item], numTwo);
-  return [textQuestion, answerCorrect];
+  const question = `${numOne} ${tmp[item]} ${numTwo}`;
+  const correctAnswer = toNumber(numOne, tmp[item], numTwo);
+  return [question, correctAnswer];
 };
 
 const runCalcGame = () => run(description, generateRoundData);
