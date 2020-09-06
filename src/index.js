@@ -12,14 +12,14 @@ const run = (description, generateRoundData) => {
     const [question, correctAnswer] = generateRoundData();
     console.log(`Question: ${question}`);
     const answer = (readlineSync.question('Your answer: '));
-    if (correctAnswer === answer) {
-      console.log('Correct!');
-    } else {
+    if (correctAnswer !== answer) {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
+    console.log('Correct!');
   }
-  return console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default run;
