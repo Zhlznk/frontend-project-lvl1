@@ -1,25 +1,28 @@
 import run from '../index.js';
-import random from '../random.js';
+import getRandomIntInclusive from '../utils.js';
 
 const description = 'What is the result of the expression?';
 const min = 0;
 const max = 20;
 
-const toNumber = (numOne, character, numTwo) => {
-  let result;
-  if (character === '+') result = `${numOne + numTwo}`;
-  if (character === '-') result = `${numOne - numTwo}`;
-  if (character === '*') result = `${numOne * numTwo}`;
-  return result;
+const calculate = (number1, character, number2) => {
+  switch (character) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    default:
+      return number1 * number2;
+  }
 };
 
 const generateRoundData = () => {
-  const tmp = ['+', '-', '*'];
-  const item = random(min, tmp.length - 1);
-  const numOne = random(min, max);
-  const numTwo = random(min, max);
-  const question = `${numOne} ${tmp[item]} ${numTwo}`;
-  const correctAnswer = toNumber(numOne, tmp[item], numTwo);
+  const operators = ['+', '-', '*'];
+  const operatorIndex = getRandomIntInclusive(min, operators.length - 1);
+  const number1 = getRandomIntInclusive(min, max);
+  const number2 = getRandomIntInclusive(min, max);
+  const question = `${number1} ${operators[operatorIndex]} ${number2}`;
+  const correctAnswer = `${calculate(number1, operators[operatorIndex], number2)}`;
   return [question, correctAnswer];
 };
 

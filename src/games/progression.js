@@ -1,19 +1,22 @@
 import run from '../index.js';
-import random from '../random.js';
+import getRandomIntInclusive from '../utils.js';
 
 const description = 'What is the result of the expression?';
 const min = 0;
-const max = 50;
+const max = 20;
+const members = 10;
 
 const generateRoundData = () => {
-  const numOne = random(min, max);
-  const numTwo = random(min, max);
-  const tmp = [numOne];
-  while (tmp.length < 10) tmp.push(tmp[tmp.length - 1] + numTwo);
-  const element = random(min, tmp.length - 1);
-  const correctAnswer = `${tmp[element]}`;
-  tmp[element] = '..';
-  const question = tmp.join(' ');
+  const number1 = getRandomIntInclusive(min, max);
+  const number2 = getRandomIntInclusive(min, max);
+  const progression = [number1];
+  while (progression.length < members) {
+    progression.push(progression[progression.length - 1] + number2);
+  }
+  const element = getRandomIntInclusive(min, progression.length - 1);
+  const correctAnswer = `${progression[element]}`;
+  progression[element] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 

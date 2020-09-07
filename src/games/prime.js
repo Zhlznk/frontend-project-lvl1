@@ -1,28 +1,26 @@
 import run from '../index.js';
-import random from '../random.js';
+import getRandomIntInclusive from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const min = 0;
 const max = 100;
 
 const isPrime = (num) => {
-  if (num < 1) return 'no';
-  if (num <= 3) return 'yes';
+  if (num < 1) return false;
+  if (num <= 3) return true;
   for (let divider = 2; divider <= num / 2; divider += 1) {
-    if (num % divider === 0) return 'no';
+    if (num % divider === 0) return false;
   }
-  return 'yes';
+  return true;
 };
 
-const needPrime = (num) => ((isPrime(num) === 'yes') ? num : needPrime(num + 1));
+const findPrimeNumber = (num) => ((isPrime(num)) ? num : findPrimeNumber(num + 1));
 
 const generateRoundData = () => {
-  let numOne = random(min, max);
-  const numTwo = random(min, max);
-  // Для того, чтобы чаще в question попадались простые числа.
-  if (numTwo % 2 > 0) numOne = needPrime(numOne);
-  const question = `${numOne}`;
-  const correctAnswer = `${isPrime(numOne)}`;
+  const number1 = getRandomIntInclusive(min, max);
+  const number2 = (number1 % 2 > 0) ? findPrimeNumber(number1) : getRandomIntInclusive(min, max);
+  const question = `${number2}`;
+  const correctAnswer = (isPrime(number2)) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
