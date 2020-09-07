@@ -13,7 +13,7 @@ const generateRoundData = () => {
   while (progression.length < members) {
     progression.push(progression[progression.length - 1] + number2);
   }
-  const element = getRandomIntInclusive(min, progression.length - 1);
+  const element = getRandomIntInclusive(0, progression.length - 1);
   const correctAnswer = `${progression[element]}`;
   progression[element] = '..';
   const question = progression.join(' ');
