@@ -1,5 +1,5 @@
 import run from '../index.js';
-import getRandomIntInclusive from '../utils.js';
+import { generateNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const min = 0;
@@ -14,13 +14,10 @@ const isPrime = (num) => {
   return true;
 };
 
-const findPrimeNumber = (num) => ((isPrime(num)) ? num : findPrimeNumber(num + 1));
-
 const generateRoundData = () => {
-  const number1 = getRandomIntInclusive(min, max);
-  const number2 = (number1 % 2 > 0) ? findPrimeNumber(number1) : getRandomIntInclusive(min, max);
-  const question = `${number2}`;
-  const correctAnswer = (isPrime(number2)) ? 'yes' : 'no';
+  const num = generateNumber(min, max);
+  const question = `${num}`;
+  const correctAnswer = (isPrime(num)) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
