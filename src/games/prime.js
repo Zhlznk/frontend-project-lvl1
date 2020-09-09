@@ -17,7 +17,7 @@ const isPrime = (num) => {
 const generateRoundData = () => {
   const num = generateNumber(min, max);
   const question = `${num}`;
-  const correctAnswer = (isPrime(num)) ? 'yes' : 'no';
+  const correctAnswer = isPrime(num) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
