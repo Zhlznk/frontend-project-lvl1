@@ -6,18 +6,18 @@ const min = 0;
 const max = 20;
 const lengthProgression = 10;
 
-const generateProgression = (lengthProgr) => {
+const generateProgression = () => {
   const firstNum = generateNumber(min, max);
   const step = generateNumber(min, max);
   const progression = [firstNum];
-  while (progression.length < lengthProgr) {
+  while (progression.length < lengthProgression) {
     progression.push(progression[progression.length - 1] + step);
   }
   return progression;
 };
 
 const generateRoundData = () => {
-  const progression = generateProgression(lengthProgression);
+  const progression = generateProgression();
   const hiddenNumIndex = generateNumber(0, progression.length - 1);
   const correctAnswer = `${progression[hiddenNumIndex]}`;
   progression[hiddenNumIndex] = '..';
