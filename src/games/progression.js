@@ -6,16 +6,21 @@ const min = 0;
 const max = 20;
 const lengthProgression = 10;
 
-const generateRoundData = () => {
-  const num = generateNumber(min, max);
-  const difference = generateNumber(min, max);
-  const progression = [num];
-  while (progression.length < lengthProgression) {
-    progression.push(progression[progression.length - 1] + difference);
+const generateProgression = (lengthProgr) => {
+  const firstNum = generateNumber(min, max);
+  const step = generateNumber(min, max);
+  const progression = [firstNum];
+  while (progression.length < lengthProgr) {
+    progression.push(progression[progression.length - 1] + step);
   }
-  const element = generateNumber(0, progression.length - 1);
-  const correctAnswer = `${progression[element]}`;
-  progression[element] = '..';
+  return progression;
+};
+
+const generateRoundData = () => {
+  const progression = generateProgression(lengthProgression);
+  const hiddenNumIndex = generateNumber(0, progression.length - 1);
+  const correctAnswer = `${progression[hiddenNumIndex]}`;
+  progression[hiddenNumIndex] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
