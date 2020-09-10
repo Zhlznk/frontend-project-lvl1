@@ -6,9 +6,9 @@ const min = 0;
 const max = 20;
 const lengthProgression = 10;
 
-const generateProgression = (firstNum, step, lengthProgr) => {
+const generateProgression = (firstNum, step, length) => {
   const progression = [firstNum];
-  while (progression.length < lengthProgr) {
+  while (progression.length < length) {
     progression.push(progression[progression.length - 1] + step);
   }
   return progression;
