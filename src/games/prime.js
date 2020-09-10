@@ -7,7 +7,6 @@ const max = 100;
 
 const isPrime = (num) => {
   if (num <= 1) return false;
-  if (num <= 3) return true;
   for (let divider = 2; divider <= Math.sqrt(num); divider += 1) {
     if (num % divider === 0) return false;
   }
